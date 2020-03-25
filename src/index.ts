@@ -4,8 +4,7 @@ import { Summary } from './Summary';
 import { WinsAnalysis } from './analyzers/WinsAnalysis';
 import { HtmlReport } from './reportTargets/HtmlReport';
 
-const csvFileReader = new CsvFileReader('football.csv');
-const reader = new MatchReader(csvFileReader);
+const reader = MatchReader.fromCsv('football.csv');
 reader.load();
 
 // const summary = new Summary(new WinsAnalysis('Newcastle'), new HtmlReport());
